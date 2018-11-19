@@ -1,0 +1,10 @@
+<main>
+    <div class="jumbotron">
+        <% if (message.status == 'success'){ %>
+        <h3> Success !!</h3>
+        <%} else if (message.status == "fail"){%>
+        <h3> Failed !!</h3>
+        <% } %> 
+        <p><%= message.msg %></p>
+    </div>
+</main>

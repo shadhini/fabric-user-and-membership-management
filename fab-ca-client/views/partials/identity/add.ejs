@@ -1,0 +1,32 @@
+<form method="post" action="/ca-server/identity/add" >
+        <div class="form-group required">
+          <label for="username" class="control-label">Username</label>
+          <input type="text"  class="form-control" id="username" name="username" placeholder="Enter username" required="required">
+        </div>
+        <div class="form-group required">
+          <label for="password" class="control-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="affiliation" >Affiliation</label>
+            <input type="text"  class="form-control" id="affiliation" name="affiliation" placeholder="Enter affiliations" >
+        </div>
+        <div class="form-group">
+            <label for="maxEnroll" >Max Enrollments</label>
+            <input type="number"  min=1 class="form-control" id="maxEnroll" name="maxEnroll" placeholder="Enter maximum number of enrollments" >
+        </div>
+        <div class="form-group">
+            <label for="attributes" >Attributes</label>
+            <input type="text"  class="form-control" id="attributes" name="attributes" placeholder="Enter attributes" >
+        </div>
+        <div class="form-group">
+            <label for="type">User Type</label>
+            <select class="form-control" id="type" name="type">
+                <option>user</option>
+                <option>peer</option>
+                <option>app</option>
+                <option>client</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Identity</button>
+</form>

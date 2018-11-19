@@ -1,0 +1,17 @@
+<form method="post" action="/channel/add-spec" >
+    <div class="form-group required">
+        <label for="path_to_spec">Specification </label>
+        <input type="file" class="form-control-file" id="path_to_spec" name="path_to_spec">
+    </div>
+    <div class="form-group required">
+      <label for="spec_name" class="control-label">Specification name</label>
+      <input type="text"  class="form-control" id="spec_name" name="spec_name" placeholder="Enter name for the specification" required="required">
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="getFilePath()">Add Specification</button>
+</form>
+<script>
+    function getFilePath() {
+        var x = document.getElementById("path_to_spec").value;
+        document.getElementById("path_to_spec") =  x;
+    }
+</script>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col-md-4">
+
+                <a href="/ca-server/enroll" class="btn btn-primary btn-block btn-sm" role="button">
+                    Enroll
+                </a>
+                <a href="/ca-server/register" class="btn btn-block btn-primary btn-sm" role="button">
+                    Register
+                </a>
+                <a href="/ca-server/re-enroll" class="btn btn-block btn-primary btn-sm" role="button">
+                    Re-enroll
+                </a>
+                <a href="/ca-server/revoke" class="btn btn-block btn-primary btn-sm" role="button">
+                    Revoke
+                </a>
+                <h4>
+                    <u>Identity Management</u>
+                </h4>
+                <a href="/ca-server/identity/add" class="btn btn-block btn-primary btn-sm" role="button">
+                    Add
+                </a>
+                <a href="/ca-server/identity/list" class="btn btn-block btn-primary btn-sm" role="button">
+                    List
+                </a>
+                <a href="/ca-server/identity/modify" class="btn btn-block btn-primary btn-sm" role="button">
+                    Modify
+                </a>
+                <a href="/ca-server/identity/remove" class="btn btn-block btn-primary btn-sm" role="button">
+                    Remove
+                </a>
+                <h4>
+                    <u>Affiliation Management</u>
+                </h4>
+                <a href="/ca-server/affiliation/add" class="btn btn-block btn-primary btn-sm" role="button">
+                    Add
+                </a>
+                <a href="/ca-server/affiliation/list" class="btn btn-block btn-primary btn-sm" role="button">
+                    List
+                </a>
+                <a href="/ca-server/affiliation/modify" class="btn btn-block btn-primary btn-sm" role="button">
+                    Modify
+                </a>
+                <a href="/ca-server/affiliation/remove" class="btn btn-block btn-primary btn-sm" role="button">
+                    Remove
+                </a>
+                <button type="button" class="btn btn-block btn-primary btn-sm">
+                    Button
+                </button>
+            </div>
+            <div class="col-md-8">
+                <% if (page == 'default'){ %>
+                <%- include ../partials/ca-server-default %>
+                <%} else if (page == "register"){%>
+                <%- include ../partials/ca-server-register %>
+                <%} else if (page == 'enroll'){%>
+                <%- include ../partials/ca-server-enroll %>
+                <%} else if (page == 're-enroll'){%>
+                <%- include ../partials/ca-server-re-enroll%>
+                <%} else if (page == 'revoke'){%>
+                <%- include ../partials/ca-server-revoke %>
+                <%} else if (page == 'id_add'){%>
+                <%- include ../partials/identity/add %>
+                <% } %>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</body>
+
+</html>

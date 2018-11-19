@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="container">
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div class="row">
+        <div class="col-md-4">
+             
+            <a href="/channel/register-user" class="btn btn-primary btn-block btn-sm" role="button">
+                Register User
+            </a> 
+            <a href="/channel/add-spec" class="btn btn-block btn-primary btn-sm" >
+                Add User Specification
+            </a> 
+            <button type="button" class="btn btn-block btn-primary btn-sm">
+                Button
+            </button>
+        </div>
+        <div class="col-md-8">
+            <% if (page == 'default'){ %>
+               <%- include ../partials/channel-default %>
+            <%} else if (page == "register-user"){%>
+                <%- include ../partials/channel-register-user %>
+            <%} else if (page == 'add-spec'){%>
+                <%- include ../partials/channel-add-spec %>
+            <%} else if (page == 'response'){%>
+                <%- include ../partials/response %>
+            <% } %>    
+        </div>
+    </div>
+  </main>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+<form method="post" action="/channel/register-user" >
+    <div class="form-group required">
+      <label for="user" class="control-label">Username</label>
+      <input type="text"  class="form-control" id="user" name="user" placeholder="Enter username" required="required">
+    </div>
+    <div class="form-group required">
+        <label for="field_path" class="control-label">Field Path</label>
+        <input type="text"  class="form-control" id="field_path" name="field_path" placeholder="Enter field-path" required="required">
+    </div>
+    <div class="form-group required">
+        <label for="quota" class="control-label">Quota</label>
+        <input type="number"  min=1 class="form-control" id="quota" name="quota" placeholder="Enter quota" required="required">
+    </div>
+    <button type="submit" class="btn btn-primary">Register User</button>
+</form>
