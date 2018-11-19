@@ -2,14 +2,14 @@ var shell = require('shelljs');
 
 //quota is a number
 var registerUser = function(user, field_path, quota ){
-    //RegisterUser.js
-    var response = shell.exec('node ./scripts/AdminScripts/dummy1.js ' + user + ' ' + field_path + ' ' + quota);
+    //dummy1.js
+    var response = shell.exec('node ./scripts/AdminScripts/RegisterUser.js ' + user + ' ' + field_path + ' ' + quota);
     return extract_info(response);
 };
 
 var addSpecification = function(path_to_spec, spec_name){
-    //AddSpecification.js
-    var response = shell.exec( 'node ./scripts/AdminScripts/dummy2.js ' + path_to_spec + ' ' + spec_name);
+    //dummy2.js
+    var response = shell.exec( 'node ./scripts/AdminScripts/AddSpecification.js ' + path_to_spec + ' ' + spec_name);
     return extract_info(response);
 };
 
